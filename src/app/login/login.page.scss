@@ -1,0 +1,67 @@
+ion-content {
+  .logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    margin: 0px 30vw;
+  }
+}
+ion-footer {
+  .signin-row {
+    padding-bottom: 3em;
+    background: transparent;
+    display: block;
+    ion-list {
+      padding: 0em 0.9em;
+      ion-list-header {
+        ion-label {
+          font-weight: bold;
+          font-size: 1.8em;
+        }
+      }
+      ion-input {
+        font-size: 0.9em;
+      }
+    }
+    fieldset {
+      border-top: thin solid #ededed;
+      border-bottom: none;
+      border-left: none;
+      border-right: none;
+      display: block;
+      padding: 0px;
+      text-align: center;
+      margin: 16px 5px;
+      font-size: 12px;
+      legend {
+        padding: 0px 10px;
+        color: #b3b3b3;
+      }
+    }
+    .other-login {
+      text-align: center;
+      ion-icon {
+        font-size: 22px;
+        padding: 0px 7px;
+      }
+    }
+    .no-account {
+      text-align: center;
+      font-size: 14px;
+      color: var(--ion-color-medium);
+      margin: 25px 0px 0px 0px;
+      span {
+        color: var(--ion-color-primary);
+        font-weight: 500;
+        margin-left: 3px;
+      }
+    }
+    .multi-tenant-list {
+      padding: 1.5em;
+      ion-button {
+        margin-top: 1.5em;
+      }
+    }
+  }
+}

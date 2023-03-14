@@ -1,0 +1,56 @@
+<ion-content>
+  <div class="logo-box">
+    <img src="../../assets/images/logo.png" alt="your-logo">
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-row class="signin-row">
+    <ion-list lines="full">
+      <ion-item-group class="ion-margin-horizontal ion-margin-bottom">
+        <form [formGroup]="form">
+          <!-- email field -->
+          <div class="ion-margin-vertical">
+            <ion-item color="white">
+              <ion-input formControlName="email" placeholder="E-Mail Address" type="text">
+              </ion-input>
+            </ion-item>
+          </div>
+          <!-- password field -->
+          <div class="ion-margin-vertical">
+            <ion-item color="white">
+              <ion-icon [name]="type ? 'eye-outline' : 'eye-off-outline'" color="medium" slot="end"
+                (click)="changeType()">
+              </ion-icon>
+              <ion-input formControlName="password" placeholder="Password" [type]="type ? 'password' : 'text'"
+                (keyup.enter)="onSubmit()">
+              </ion-input>
+            </ion-item>
+          </div>
+          <!-- login button -->
+          <ion-button (click)="onSubmit()" *ngIf='!showSpinnerDot' expand="block" color="primary">
+            Login
+          </ion-button>
+          <ion-button *ngIf='showSpinnerDot' expand="block" color="primary">
+            <ion-spinner name="dots" color="light"></ion-spinner>
+          </ion-button>
+
+          <!-- divider -->
+          <fieldset>
+            <legend>OR</legend>
+          </fieldset>
+
+          <!-- social login -->
+          <ion-grid class="other-login">
+            <ion-icon name="logo-google" color="primary"></ion-icon>
+            <ion-icon name="logo-facebook" color="primary"></ion-icon>
+            <ion-icon name="logo-twitter" color="primary"></ion-icon>
+          </ion-grid>
+
+          <!-- create new account -->
+          <p class="no-account">Don't have an account? <span routerLink="/register">Register</span></p>
+        </form>
+      </ion-item-group>
+    </ion-list>
+  </ion-row>
+</ion-footer>

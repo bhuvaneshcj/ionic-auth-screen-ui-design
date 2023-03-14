@@ -1,0 +1,47 @@
+<ion-content>
+  <div class="logo-box">
+    <img src="../../assets/images/logo.png" alt="your-logo">
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-row class="signup-row">
+    <ion-list lines="full">
+      <ion-item-group class="ion-margin-horizontal ion-margin-bottom">
+        <form [formGroup]="form">
+          <div class="ion-margin-vertical">
+            <ion-item color="white">
+              <ion-input formControlName="name" placeholder="Name" type="text">
+              </ion-input>
+            </ion-item>
+          </div>
+          <div class="ion-margin-vertical">
+            <ion-item color="white">
+              <ion-input formControlName="email" placeholder="E-Mail Address" type="text">
+              </ion-input>
+            </ion-item>
+          </div>
+          <div class="ion-margin-vertical">
+            <ion-item color="white">
+              <ion-icon [name]="type ? 'eye-outline' : 'eye-off-outline'" color="medium" slot="end"
+                (click)="changeType()">
+              </ion-icon>
+              <ion-input formControlName="password" placeholder="Password" [type]="type ? 'password' : 'text'"
+                (keyup.enter)="onSubmit()">
+              </ion-input>
+            </ion-item>
+          </div>
+
+          <ion-button (click)="onSubmit()" *ngIf='!showSpinnerDot' expand="block" color="primary">
+            Register
+          </ion-button>
+          <ion-button *ngIf='showSpinnerDot' expand="block" color="primary">
+            <ion-spinner name="dots" color="light"></ion-spinner>
+          </ion-button>
+
+          <p class="no-account">Already have an account? <span routerLink="/login">Login</span></p>
+        </form>
+      </ion-item-group>
+    </ion-list>
+  </ion-row>
+</ion-footer>

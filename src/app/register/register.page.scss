@@ -1,0 +1,39 @@
+ion-content {
+  .logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    margin: 0px 30vw;
+  }
+}
+ion-footer {
+  .signup-row {
+    padding-bottom: 3em;
+    background: transparent;
+    display: block;
+    ion-list {
+      padding: 0em 0.9em;
+      ion-list-header {
+        ion-label {
+          font-weight: bold;
+          font-size: 1.8em;
+        }
+      }
+      ion-input {
+        font-size: 0.9em;
+      }
+    }
+    .no-account {
+      text-align: center;
+      font-size: 14px;
+      color: var(--ion-color-medium);
+      margin: 25px 0px 0px 0px;
+      span {
+        color: var(--ion-color-primary);
+        font-weight: 500;
+        margin-left: 3px;
+      }
+    }
+  }
+}

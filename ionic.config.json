@@ -1,0 +1,7 @@
+{
+  "name": "ionic-auth-screen",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
